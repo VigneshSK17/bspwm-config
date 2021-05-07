@@ -18,7 +18,7 @@
 - lemonbar (for bar) 
 - conky (for sidebar)
 - alttab (for a view when doing alt-tab)
-** Inside sxhkdrc (all can be replaced, removed, or ignored)
+** Inside sxhkdrc (all can be removed/replaced)
 - xfce4-screenshooter
 - firefox
 - skippy-xd (gives exposé view)
