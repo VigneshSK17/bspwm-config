@@ -23,6 +23,7 @@
 - xfce4-screenshooter
 - firefox
 - skippy-xd (gives exposé view)
+- dmenu
 * Other Solarized Configs
 ** st
 #+BEGIN_SRC
