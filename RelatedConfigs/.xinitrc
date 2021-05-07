@@ -1,0 +1,1 @@
+/home/vigsk17/.xinitrc
