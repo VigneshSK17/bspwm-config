@@ -1,2 +1,4 @@
-# bspwm-config
-# bspwm-config
+#+TITLE: Solarized BSPWM config
+
+#+CAPTION: Empty Home Screen
+[[./Images/home-screen.png]]
