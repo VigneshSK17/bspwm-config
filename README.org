@@ -18,6 +18,7 @@
 - lemonbar (for bar) 
 - conky (for sidebar)
 - alttab (for a view when doing alt-tab)
+- dunst 
 ** Inside sxhkdrc (all can be removed/replaced)
 - xfce4-screenshooter
 - firefox

@@ -24,4 +24,5 @@ bspc rule -a Zathura state=tiled
 ~/.config/bspwm/solarized-bar.sh | lemonbar -pf Iosevka &
 alttab -w 1 -bg "#002B36" -fg "#FDF6E3" -frame "#657b83" -font "xft:Iosevka" &
 conky -c ~/.config/bspwm/solarized-conky &
+dunst -config ~/.config/bspwm/RelatedConfigs/dunstrc &
 
