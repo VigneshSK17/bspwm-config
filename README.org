@@ -2,3 +2,33 @@
 
 #+CAPTION: Empty Home Screen
 [[./Images/home-screen.png]]
+
+* Programs
+- BSPWM
+- sxhkd
+** Inside .xinitrc (all can be removed/replaced)
+- st
+- picom
+- redshift
+- nitrogen
+- setxkbmap (will vary in name by distro)
+- emacs
+- xbindkeys (will vary in name by distro)
+** Inside bspwmrc (all can be removed/replaced)
+- lemonbar (for bar) 
+- conky (for sidebar)
+- alttab (for a view when doing alt-tab)
+** Inside sxhkdrc (all can be replaced, removed, or ignored)
+- xfce4-screenshooter
+- firefox
+- skippy-xd (gives exposé view)
+* Other Solarized Configs
+** st
+#+BEGIN_SRC
+git clone https://gitlab.com/VigneshSK17/st-config.git
+#+END_SRC
+Note: SWITCH TO PATCHES BRANCH before compiling using:
+#+BEGIN_SRC
+git checkout patches
+#+END_SRC
+
