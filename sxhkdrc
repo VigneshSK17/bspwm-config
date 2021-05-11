@@ -28,7 +28,7 @@ super + shift + s
 
 # Skippy-xd expose
 super + e
-  skippy-xd --config ~/.config/bspwm/skippy-xd.rc
+  dmenu_run -fn Iosevka -nb "#073642" -nf "#fdf6e3" -sb "#fdf6e3" -sf "#073642" -p Applications & skippy-xd --activate-window-picker --config ~/.config/bspwm/RelatedConfigs/skippy-xd.rc && fg
 
 #
 # bspwm hotkeys
@@ -71,7 +71,7 @@ super + ctrl + {m,x,y,z}
 #
 
 # focus the node in the given direction
-super + ctrl + {h,j,k,l}
+super + {h,j,k,l}
 	bspc node -s {west,south,north,east}
 
 # focus the node for the given path jump
@@ -99,6 +99,10 @@ super + {o,i}
 # focus or send to the given desktop
 super + {_,shift + }{1-9,0}
 	bspc {desktop -f,node -d} '^{1-9,10}'
+
+# For gestures
+super + {Left,Right}
+  bspc desktop -f {prev,next}
 
 #
 # preselect

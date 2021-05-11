@@ -69,7 +69,7 @@ tintOpacity = 0
 opacity = 200
 
 [highlight]
-tint = #101020
+tint = #002b36
 tintOpacity = 64
 opacity = 255
 

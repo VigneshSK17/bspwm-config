@@ -41,6 +41,8 @@ fi
 
 # start some nice programs
 
+export _JAVA_AWT_WM_NONREPARENTING=1
+
 st &
 picom &
 redshift &
@@ -50,6 +52,8 @@ setxkbmap -option grp:alt_shift_toggle us,es &
 emacs --daemon &
 xbindkeys
 
+# Gesture Stuff
+fusuma &
 
 exec bspwm
 
