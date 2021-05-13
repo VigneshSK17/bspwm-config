@@ -1,4 +1,4 @@
-#!/usr/bin/bash
+#!/bin/bash
 
 # Define the clock
 Clock() {
@@ -50,7 +50,10 @@ Workspace() {
 # Volume for Arch Linux
 Volume() {
 	MUTE=$(pacmd list-sinks | awk '/muted/ { print $2 }')
-	VALUE=$(awk -F"[][]" '/Mono:/ { print $2 }' <(amixer sget Master))
+# For mono speaker
+#	VALUE=$(awk -F"[][]" '/Mono:/ { print $2 }' <(amixer sget Master))
+# For dual speaker
+	VALUE=$(awk -F"[][]" '/Front Left:/ { print $2 }' <(amixer sget Master))
 
 	if [[ $MUTE = yes ]]
 	then

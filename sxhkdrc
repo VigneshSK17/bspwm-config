@@ -20,11 +20,11 @@ super + a
 
 # Firefox
 super + q
-  firefox
+  firefox-bin
 
 # Imgur-Screenshot
 super + shift + s
-  xfce4-screenshooter -ri
+  imgur-screenshot --keep-file false
 
 # Skippy-xd expose
 super + e

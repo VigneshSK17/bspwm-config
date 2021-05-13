@@ -49,11 +49,14 @@ redshift &
 nitrogen --restore &
 setxkbmap -option grp:alt_shift_toggle us,es &
 # Add compose key later
-emacs --daemon &
+emacs --daemon --with-x-toolkit=lucid &
 xbindkeys
 
 # Gesture Stuff
-fusuma &
+# fusuma -d
+
+# Gentoo Stuff
+dhcpcd wlp2s0
 
 exec bspwm
 
