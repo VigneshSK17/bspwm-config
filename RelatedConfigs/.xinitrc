@@ -56,7 +56,7 @@ xbindkeys
 # fusuma -d
 
 # Gentoo Stuff
-dhcpcd wlp2s0
+# dhcpcd wlp2s0
 
 exec bspwm
 
