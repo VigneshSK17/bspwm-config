@@ -26,7 +26,7 @@ fi
 if [ -f "$userresources" ]; then
 
 
-
+    
 
 
 
@@ -43,28 +43,34 @@ fi
 
 export _JAVA_AWT_WM_NONREPARENTING=1
 
-st &
+# st &
 picom &
 redshift &
-nitrogen --restore &
 setxkbmap -option grp:alt_shift_toggle us,es &
 # Add compose key later
-emacs --daemon --with-x-toolkit=lucid &
+emacs --daemon
 xbindkeys
 
 # Gesture Stuff
 # fusuma -d
 
-# Gentoo Stuff
-# dhcpcd wlp2s0
-
+nitrogen --restore &
 exec bspwm
+
 
 # Berry WM
 
 # sxhkd -c /home/vigsk17/.config/berry/sxhkdrc &
 # /home/vigsk17/.config/berry/solarized-bar.sh | lemonbar -pf Iosevka -d &
 # exec berry
+
+# 2bwm
+
+#feh --bg-scale ~/.config/2bwm/Wallpapers/black.png
+#while true; do
+#    # Log stderror to a file 
+#    2bwm 2> ~/.2bwm.log
+#done
 
 if [ -d /etc/X11/xinit/xinitrc.d ] ; then
  for f in /etc/X11/xinit/xinitrc.d/?*.sh ; do
