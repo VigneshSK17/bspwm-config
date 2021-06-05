@@ -9,17 +9,18 @@ Clock() {
 
 Battery() {
 
-        STATE=$(awk '/state:/ {print $2}' <(upower -i /org/freedesktop/UPower/devices/battery_BAT0))
+        # STATE=$(awk '/state:/ {print $2}' <(upower -i /org/freedesktop/UPower/devices/battery_BAT0))
+        STATE=$(acpi --battery | cut -d, -f1)
 
         BATPERC=$(acpi --battery | cut -d, -f2)
 
-        if [[ $STATE = discharging ]]
+        if [[ $STATE = "Battery 0: Discharging" ]]
         then
                 echo "$BATPERC"
-        elif [[ $STATE = charging ]]
+        elif [[ $STATE = "Battery 0: Charging" ]]
         then
                 echo "$BATPERC Charging"
-        elif [[ $BATPERC = 100% || $STATE = fully-charged ]]
+        elif [[ $BATPERC = 100% || $STATE = "Battery 0: Full" ]]
         then
                 echo " Battery Full"
         else 
@@ -32,37 +33,37 @@ Workspace() {
         echo "$(($WORK + 1))"
 }
 
-# Volume() {
-# 
-#         MUTE=$(awk -F"[][]" '/Left:/ { print $4 }' <(amixer sget Master))
-#         VALUE=$(awk -F"[][]" '/Left:/ { print $2 }' <(amixer sget Master))
-# 
-#         if [[ $MUTE = off ]]        
-#         then
-#                 MUTED=" Muted"
-#                 echo "$VALUE$MUTED"
-#         else
-#                 VOL=$(awk -F"[][]" '/Left:/ { print $2 }' <(amixer sget Master))
-#                 echo "$VALUE"
-#         fi
-# }
+Volume() {
+
+        MUTE=$(awk -F"[][]" '/Left:/ { print $4 }' <(amixer sget Master))
+        VALUE=$(awk -F"[][]" '/Left:/ { print $2 }' <(amixer sget Master))
+
+        if [[ $MUTE = off ]]        
+        then
+                MUTED=" Muted"
+                echo "$VALUE$MUTED"
+        else
+                VOL=$(awk -F"[][]" '/Left:/ { print $2 }' <(amixer sget Master))
+                echo "$VALUE"
+        fi
+}
 
 # Volume for Arch Linux
-Volume() {
-	MUTE=$(pacmd list-sinks | awk '/muted/ { print $2; exit }')
+# Volume() {
+# 	MUTE=$(pacmd list-sinks | awk '/muted/ { print $2; exit }')
 # For mono speaker
-VALUE=$(awk -F"[][]" '/Mono:/ { print $2 }' <(amixer sget Master))
+# VALUE=$(awk -F"[][]" '/Mono:/ { print $2 }' <(amixer sget Master))
 # For dual speaker
 #	VALUE=$(awk -F"[][]" '/Front Left:/ { print $2 }' <(amixer sget Master))
-
-	if [[ $MUTE = yes ]]
-	then
-		MUTED=" Muted"
-		echo "$VALUE$MUTED"
-	else
-		echo "$VALUE"
-	fi
-}
+# 
+# 	if [[ $MUTE = yes ]]
+# 	then
+# 		MUTED=" Muted"
+# 		echo "$VALUE$MUTED"
+# 	else
+# 		echo "$VALUE"
+# 	fi
+# }
 
 # Print the clock
 

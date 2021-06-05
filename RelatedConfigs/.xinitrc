@@ -54,8 +54,8 @@ xbindkeys
 # Gesture Stuff
 # fusuma -d
 
-nitrogen --restore &
-exec bspwm
+~/.fehbg &
+exec dbus-run-session -- bspwm
 
 
 # Berry WM

@@ -20,7 +20,7 @@ super + a
 
 # Firefox
 super + q
-  firefox-bin
+  firefox
 
 # Imgur-Screenshot
 super + shift + s

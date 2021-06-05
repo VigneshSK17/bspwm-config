@@ -17,6 +17,9 @@ bindkey "^[[3~" delete-char
 bindkey '^[[A' history-substring-search-up
 bindkey '^[[B' history-substring-search-down
 
+bindkey -r "^l"
+bindkey -r "^j"
+
 source ~/.zplug/init.zsh
 
 export ZPLUG_HOME=$HOME/.zplug
@@ -136,6 +139,11 @@ SPACESHIP_PYENV_SYMBOL=""
 # CHAR
 SPACESHIP_CHAR_SUFFIX=" "
 
+# Exports
+
+export FZF_DEFAULT_COMMAND="ag --hidden --ignore .git -f -g \"\""
+export JAVA_HOME='/usr/lib/jvm/openjdk11-bin/'
+
 # Aliases
 
 alias ls="ls --color"
@@ -148,6 +156,8 @@ alias idea="bash $HOME/Programs/idea-IC-211.7142.45/bin/idea.sh"
 alias rip="fuck"
 
 alias luc-ssh="ssh azureuser@52.170.74.23"
+
+alias discord="$HOME/.config/Discord/Discord"
 
 # Gentoo Aliases
 
